@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch API Example</title>
+</head>
+
+<body>
+    <h1 id="fileContent"></h1>
+
+    <script>
+        fetch('fetch_api.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('fileContent').innerText = data;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+
+</html>
